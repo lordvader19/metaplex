@@ -77,9 +77,19 @@ const UserActions = (props: { mobile?: boolean; onClick?: any }) => {
           >
             {canCreate && (
               <>
-                <Link to={`/art/create`} style={{ width: '100%' }}>
+                <Link to={`/admin/pack/create/`} style={{ width: '100%' }}>
                   <Button className="metaplex-button-default" style={btnStyle}>
                     Create
+                  </Button>
+                </Link>
+                &nbsp;&nbsp;
+              </>
+            )}
+            {canCreate && (
+              <>
+                <Link to={`/art/create/0`} style={{ width: '100%' }}>
+                  <Button className="metaplex-button-default" style={btnStyle}>
+                    Create Art
                   </Button>
                 </Link>
                 &nbsp;&nbsp;

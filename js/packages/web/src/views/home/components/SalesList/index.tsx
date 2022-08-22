@@ -7,9 +7,12 @@ import { useMeta } from '../../../../contexts';
 import { CardLoader } from '../../../../components/MyLoader';
 import { Banner } from '../../../../components/Banner';
 import { HowToBuyModal } from '../../../../components/HowToBuyModal';
-
+import{Example} from '../../../../components/Images'
+import{HighlightsPacks} from '../../../../components/Images'
 import { useAuctionsList } from './hooks/useAuctionsList';
 import { AuctionRenderCard } from '../../../../components/AuctionRenderCard';
+import { SearchBox } from '../../../../components/AppBar/searchBox';
+import { red } from 'bn.js';
 
 const { TabPane } = Tabs;
 const { Content } = Layout;
@@ -41,18 +44,26 @@ export const SalesListView = (props: { collectionMintFilter?: string }) => {
 
   return (
     <>
-      {!props.collectionMintFilter && (
-        <Banner
+      {
+         
+    
+      !props.collectionMintFilter && (
+        Example()
+        
+        /*<Banner
           src="/main-banner.svg"
           headingText="The amazing world of Metaplex."
           subHeadingText="Buy exclusive Metaplex NFTs."
           actionComponent={<HowToBuyModal buttonClassName="secondary-btn" />}
           useBannerBg
-        />
+        />*/
       )}
+      {
+        HighlightsPacks()
+      }
       <Layout>
         <Content style={{ display: 'flex', flexWrap: 'wrap' }}>
-          <Col style={{ width: '100%', marginTop: 32 }}>
+          <Col style={{ width: '100%', marginTop: 32,}}>
             <Row>
               <Tabs
                 activeKey={activeKey}

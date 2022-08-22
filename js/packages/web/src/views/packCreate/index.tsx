@@ -73,7 +73,7 @@ export const PackCreateView = (): ReactElement => {
     packItemsFilter(selectedItems, isUnlimitedSupply),
   );
   const vouchersToSelect = items.filter(vouchersFilter(selectedItems));
-
+  console.log(vouchersToSelect);
   const [selectedVoucherId] = Object.keys(selectedVouchers);
   const { ref, data } = useExtendedArt(selectedVoucherId);
 
@@ -213,8 +213,9 @@ export const PackCreateView = (): ReactElement => {
             isLoading={isLoading}
           />
         )}
-
+    
         {step === CreatePackSteps.SelectVoucher && (
+          
           <SelectItemsStep
             items={vouchersToSelect}
             selectedItems={selectedVouchers}

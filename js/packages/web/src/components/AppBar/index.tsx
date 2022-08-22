@@ -14,20 +14,21 @@ import {
 import { ConnectButton } from '@oyster/common';
 import { MobileNavbar } from '../MobileNavbar';
 
+
 const getDefaultLinkActions = (connected: boolean) => {
   return [
     <Link to={`/`} key={'explore'}>
       <Button className="app-btn">Explore</Button>
     </Link>,
-    // <Link to={`/collections`} key={'collections'}>
-    //  <Button className="app-btn">Collections</Button>
-    //</Link>,
+     <Link to={`/collections`} key={'collections'}>
+      <Button className="app-btn">Collections</Button>
+    </Link>,
     <Link to={`/artworks`} key={'artwork'}>
       <Button className="app-btn">{connected ? 'My Items' : 'Artwork'}</Button>
     </Link>,
-    // <Link to={`/artists`} key={'artists'}>
-    //   <Button className="app-btn">Creators</Button>
-    // </Link>,
+     <Link to={`/pack/9RAMEMUSx5CG4fGwBGM8WiaMSQMFBVDUjk1kJN7c4vRT`} key={'/pack/packFeFNZzMfD9aVWL7QbGz1WcU7R9zpf6pvNsw2BLu'}>
+       <Button className="app-btn">Packs</Button>
+     </Link>,
   ];
 };
 
@@ -113,7 +114,10 @@ export const MetaplexMenu = () => {
 export const LogoLink = () => {
   return (
     <Link to={`/`}>
-      <img src={'/metaplex-logo.svg'} />
+      <div>
+          <img id="logo" src='https://upload.wikimedia.org/wikipedia/commons/2/24/NFT_Icon.png' />
+      </div>
+      
     </Link>
   );
 };

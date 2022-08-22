@@ -19,9 +19,11 @@ import { PackCreateView } from './views/packCreate';
 import { BillingView } from './views/auction/billing';
 import { CollectionsView } from './views/collections';
 import { CollectionDetailView } from './views/collections/collectionDetail';
+import PackViewWithContext from './views/pack';
 
 export function Routes() {
   const shouldEnableNftPacks = process.env.NEXT_ENABLE_NFT_PACKS === 'true';
+ // const shouldEnableNftPacks=true;
   return (
     <>
       <HashRouter basename={'/'}>
@@ -40,7 +42,9 @@ export function Routes() {
                 path="/pack/:packKey"
                 component={() => <PackView />}
               />
+              
             )}
+          
             <Route exact path="/admin" component={() => <AdminView />} />
             <Route
               exact
